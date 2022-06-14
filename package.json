@@ -1,0 +1,20 @@
+{
+  "name": "rcon-prom",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prom-client": "^14.0.1",
+    "rcon-client": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "typescript": "^4.7.2"
+  }
+}

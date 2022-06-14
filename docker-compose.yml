@@ -1,0 +1,16 @@
+services:
+  factorio:
+    image: factoriotools/factorio:1.1.59
+    volumes:
+      - ./factorio-test-config/rconpw:/factorio/config/rconpw
+    environment:
+      - GENERATE_NEW_SAVE=true
+      - SAVE_NAME=test
+  rcon-prom:
+    build: .
+    environment:
+      - FACTORIO_HOSTNAME=factorio
+      - FACTORIO_RCON_PORT=27015
+      - FACTORIO_RCON_PASSWORD=roon1aiZaixiaqu
+    ports:
+      - "3000:3000"

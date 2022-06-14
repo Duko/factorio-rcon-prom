@@ -1,0 +1,9 @@
+dist
+built
+.vscode
+node_modules
+factorio-test-config
+docker-compose.yml
+Dockerfile
+README.node_modules
+LICENSE
