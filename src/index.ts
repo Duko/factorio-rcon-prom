@@ -20,7 +20,7 @@ server.on('request', async (request, response) => {
         
         metrics.rocketsLaunchedCounter.reset();
         metrics.rocketsLaunchedItemsCounter.reset();
-        metrics.productionInputCounter.reset()
+        metrics.flowStatisticsCounter.reset()
         for (let forceName in json.forces) {
             let force = json.forces[forceName];
 
@@ -39,7 +39,7 @@ server.on('request', async (request, response) => {
             for (let type in force.flow_statistics) {
                 for (let direction in force.flow_statistics[type]) {
                     for (let item in force.flow_statistics[type][direction]) {
-                        metrics.productionInputCounter.inc({
+                        metrics.flowStatisticsCounter.inc({
                             "force": forceName,
                             "type": type,
                             "direction": direction,

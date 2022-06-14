@@ -36,8 +36,8 @@ export class Metrics {
         registers: [this.registry]
     });
     
-    public productionInputCounter = new Counter({
-        name: 'factorio_item_production_input_total',
+    public flowStatisticsCounter = new Counter({
+        name: 'factorio_flow_statistics_total',
         help: 'some help here',
         labelNames: ['force', 'type', 'direction', 'item'],
         registers: [this.registry]
